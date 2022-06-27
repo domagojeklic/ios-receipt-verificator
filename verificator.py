@@ -239,7 +239,7 @@ def verify_receipt(receipt, transaction_id, original_transaction_id):
 			if transaction[RECEIPT_KEY_ORIGINAL_TRANSACTION_ID] == original_transaction_id:
 				# If transaction IDs do not match we raise an error but we still verify transaction as valid 
 				if transaction[RECEIPT_KEY_TRANSACTION_ID] != transaction_id:
-					app.logger.error('TransactionIDs do not macht {}')
+					app.logger.error('TransactionIDs do not match {}')
 
 				transaction_epoch_ms = transaction[RECEIPT_KEY_EXPIRE_DATE_MS]
 				epoch_time = float(transaction_epoch_ms) / 1000
